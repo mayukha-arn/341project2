@@ -1,3 +1,4 @@
+import sys
 #send all output to the output.txt file
 output_file="output.txt"
 log784=[] #lines shown on screen will be stored in this list
@@ -11,18 +12,10 @@ log784.append(header784)
 
 #implementing PDA
 
-#need to get output to output.txt file
-#store lines in log (method name: log784)
-#store empty string variable as epilon
+piped784=not sys.stdin.isatty() #check if input is piped or not
+inputs784=[ln.strip() for ln in sys.stdin.read().splitlines() if ln.strip()!=""] if piped784 else []
 
-#needed methods: 
-# general: log, output, input, 
-#digits (store numerical alphabet), operator (store operator alphabet), 
-# transitions show the logic of each state transition
-#process method to read and output
-#read to read user input
-#function to analyze strings
-#main method to run the program
+#implementing PDA
 
 #print to screen and remember output lines for output
 def output784(text):
@@ -31,7 +24,11 @@ def output784(text):
 
 #log prompt and answer
 def input784(prompt):
-    text=input(prompt)
+    if piped784:
+        text=inputs784.pop(0) if inputs784 else ""
+        print(prompt+text) #piped input not typed on screen, so print it to screen
+    else:
+        text=input(prompt)
     log784.append(prompt+text)
     return text
 
@@ -113,10 +110,10 @@ def process784(string):
         output784(f"Read: {ch}")
         result=transition(state,ch,stack)
         if result is None:
-            output784(f"PDA crashed at index {idx} with input {ch}. Current stack: {stack}")
+            output784(f"PDA crashed in state q{state} at index {idx} with input {ch}. Current stack: {stack}")
             return False
         next_state,popped,push= result
-        output784(f"Transition to state q{state}, pop: {popped}, push: {push}")
+        output784(f"Transition to state q{state} to state q{next_state}, read{ch}, pop: {popped}, push: {push}")
         if popped != EPS784 and stack:
             stack.pop()
         if push != EPS784:
@@ -126,15 +123,23 @@ def process784(string):
     return state in accepted_states
         
 def read784():
-    prompt="Enter an integer explaining the number of input strings to be analyzed: "
+    prompt="Enter an integer m >=0 explaining the number of input strings to be analyzed: "
+    if piped784 and not inputs784:
+        output784("Exiting: no input")
+        return 0
+    #if fild only holds strings, process all
+    if piped784 and not inputs784[0].isdigit():
+        output784("No integer m provided. Processing all strings in the input file.")
+        return len(inputs784)
     while True:
         text=input784(prompt)
         try:
             m=int(text)
-            if m>0:
+            if m>=0:
                 return m
         except ValueError:
-            output784("Invalid input. Please enter a positive integer.")
+            pass
+        output784("Invalid input. Please enter an integer greater than or equal to 0.")
 
 def pdaanalyzer784():
     m=read784()
@@ -143,7 +148,10 @@ def pdaanalyzer784():
         output784("No strings to analyze. Exiting.")
         return
     for i in range(1,m+1):
-        string=input784(f"Enter string {i}: ")
+        if piped784 and not inputs784:
+            output784(f"Input file ended before all strings were read. Processed {i-1} strings.")
+            break
+        string=input784(f"Enter string {i} of {m} to be analyzed: ")
         output784(f"Analyzing string {i}: {string}")
         accepted=process784(string)
         output784(f"Result: {'Accepted' if accepted else 'Rejected'}")
@@ -154,7 +162,9 @@ def pdaanalyzer784():
         output784(f"End of analysis for string {i}.\n")
 
 def main784():
+    try:
         pdaanalyzer784()
+    finally:
         with open(output_file,"w",encoding="utf-8") as f:
             for line in log784:
                 f.write(line+"\n")
