@@ -2,20 +2,168 @@ Project 2 for CS 341
 Section Number: H01 
 Written by: Mayukha Ajeesh Ramsha Nath, ma2784
 Instructor: Marvin Nakayama, marvin@njit.edu
-Enter an integer m >=0 explaining the number of input strings to be analyzed: 3
-value of m: 3
-Enter string 1 of 3 to be analyzed: helloooo
-Analyzing string 1: helloooo
-Start date: q1
-Read: h
-PDA crashed in state q1 at index 0 with input h. Current stack: []
-Result: Rejected
-String 1 is rejected by the PDA.
+Enter an integer m >=0 explaining the number of input strings to be analyzed: 15
+value of m: 15
+Enter string 1 of 15 to be analyzed: ycpppc021.67ryyyyyyr
+Analyzing string 1: ycpppc021.67ryyyyyyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: 0
+Transition to state q4 to state q5, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: 2
+Transition to state q5 to state q5, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: 1
+Transition to state q5 to state q5, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: 6
+Transition to state q7 to state q7, read6, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: 7
+Transition to state q7 to state q7, read7, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', 'A']
+Read: r
+Transition to state q7 to state q9, readr, pop: A, push: A
+Current stack: ['$', 'A', 'A', 'A']
+Read: y
+Transition to state q9 to state q10, ready, pop: A, push: ε
+Current stack: ['$', 'A', 'A']
+Read: y
+Transition to state q10 to state q9, ready, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: y
+Transition to state q9 to state q10, ready, pop: A, push: ε
+Current stack: ['$', 'A']
+Read: y
+Transition to state q10 to state q9, ready, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: y
+Transition to state q9 to state q10, ready, pop: A, push: ε
+Current stack: ['$']
+Read: y
+Transition to state q10 to state q9, ready, pop: ε, push: ε
+Current stack: ['$']
+Read: r
+Transition to state q9 to state q11, readr, pop: $, push: ε
+Current stack: []
+Result: Accepted
+String 1 is accepted by the PDA.
 End of analysis for string 1.
 
-Enter string 2 of 3 to be analyzed: ycc34./.1*902.8+42.-3.265*78.6/.43/09.rr
-Analyzing string 2: ycc34./.1*902.8+42.-3.265*78.6/.43/09.rr
-Start date: q1
+Enter string 2 of 15 to be analyzed: ycc.35.2*.3rr
+Analyzing string 2: ycc.35.2*.3rr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$']
+Read: 3
+Transition to state q6 to state q7, read3, pop: ε, push: ε
+Current stack: ['$']
+Read: 5
+Transition to state q7 to state q7, read5, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+PDA crashed in state q7 at index 6 with input .. Current stack: ['$']
+Result: Rejected
+String 2 is rejected by the PDA.
+End of analysis for string 2.
+
+Enter string 3 of 15 to be analyzed: ycc9./28.5-.7+8.6+rr
+Analyzing string 3: ycc9./28.5-.7+8.6+rr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: 9
+Transition to state q4 to state q5, read9, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$']
+Read: 2
+Transition to state q4 to state q5, read2, pop: ε, push: ε
+Current stack: ['$']
+Read: 8
+Transition to state q5 to state q5, read8, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$']
+Read: 5
+Transition to state q7 to state q7, read5, pop: ε, push: ε
+Current stack: ['$']
+Read: -
+Transition to state q7 to state q4, read-, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$']
+Read: 7
+Transition to state q6 to state q7, read7, pop: ε, push: ε
+Current stack: ['$']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$']
+Read: 8
+Transition to state q4 to state q5, read8, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$']
+Read: 6
+Transition to state q7 to state q7, read6, pop: ε, push: ε
+Current stack: ['$']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$']
+Read: r
+PDA crashed in state q4 at index 18 with input r. Current stack: ['$']
+Result: Rejected
+String 3 is rejected by the PDA.
+End of analysis for string 3.
+
+Enter string 4 of 15 to be analyzed: ycc34./.1*902.8+42.-3.265*78.6/.43/09.rr
+Analyzing string 4: ycc34./.1*902.8+42.-3.265*78.6/.43/09.rr
+Start state: q1
 Read: y
 Transition to state q1 to state q2, ready, pop: ε, push: $
 Current stack: ['$']
@@ -137,12 +285,210 @@ Read: r
 Transition to state q9 to state q11, readr, pop: $, push: ε
 Current stack: []
 Result: Accepted
-String 2 is accepted by the PDA.
-End of analysis for string 2.
+String 4 is accepted by the PDA.
+End of analysis for string 4.
 
-Enter string 3 of 3 to be analyzed: ycpc(())ryyr
-Analyzing string 3: ycpc(())ryyr
-Start date: q1
+Enter string 5 of 15 to be analyzed: ycppc234.5/.7ryyr
+Analyzing string 5: ycppc234.5/.7ryyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: 2
+Transition to state q4 to state q5, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: 3
+Transition to state q5 to state q5, read3, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: 4
+Transition to state q5 to state q5, read4, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: 5
+Transition to state q7 to state q7, read5, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: 7
+Transition to state q6 to state q7, read7, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: r
+Transition to state q7 to state q9, readr, pop: A, push: A
+Current stack: ['$', 'A', 'A']
+Read: y
+Transition to state q9 to state q10, ready, pop: A, push: ε
+Current stack: ['$', 'A']
+Read: y
+Transition to state q10 to state q9, ready, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: r
+PDA crashed in state q9 at index 16 with input r. Current stack: ['$', 'A']
+Result: Rejected
+String 5 is rejected by the PDA.
+End of analysis for string 5.
+
+Enter string 6 of 15 to be analyzed: ycpc7./.+.6ryyr
+Analyzing string 6: ycpc7./.+.6ryyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: 7
+Transition to state q4 to state q5, read7, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: +
+PDA crashed in state q6 at index 8 with input +. Current stack: ['$', 'A']
+Result: Rejected
+String 6 is rejected by the PDA.
+End of analysis for string 6.
+
+Enter string 7 of 15 to be analyzed: ycpc(.01*(5.+2.8)-8).0ryyr
+Analyzing string 7: ycpc(.01*(5.+2.8)-8).0ryyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: 0
+Transition to state q6 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: 1
+Transition to state q7 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: *
+Transition to state q7 to state q4, read*, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', '(', '(']
+Read: 5
+Transition to state q4 to state q5, read5, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: 2
+Transition to state q4 to state q5, read2, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: 8
+Transition to state q7 to state q7, read8, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', '(']
+Read: -
+Transition to state q8 to state q4, read-, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: 8
+Transition to state q4 to state q5, read8, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: )
+PDA crashed in state q5 at index 19 with input ). Current stack: ['$', 'A', '(']
+Result: Rejected
+String 7 is rejected by the PDA.
+End of analysis for string 7.
+
+Enter string 8 of 15 to be analyzed: ycppc((3.2)8)ryyyyr
+Analyzing string 8: ycppc((3.2)8)ryyyyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 3
+Transition to state q4 to state q5, read3, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 2
+Transition to state q7 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: 8
+PDA crashed in state q8 at index 11 with input 8. Current stack: ['$', 'A', 'A', '(']
+Result: Rejected
+String 8 is rejected by the PDA.
+End of analysis for string 8.
+
+Enter string 9 of 15 to be analyzed: ycpc(())ryyr
+Analyzing string 9: ycpc(())ryyr
+Start state: q1
 Read: y
 Transition to state q1 to state q2, ready, pop: ε, push: $
 Current stack: ['$']
@@ -164,6 +510,619 @@ Current stack: ['$', 'A', '(', '(']
 Read: )
 PDA crashed in state q4 at index 6 with input ). Current stack: ['$', 'A', '(', '(']
 Result: Rejected
-String 3 is rejected by the PDA.
-End of analysis for string 3.
+String 9 is rejected by the PDA.
+End of analysis for string 9.
+
+Enter string 10 of 15 to be analyzed: ycppc((1.00/(00.0+2.)-.2))/((5.2/59.))ryyyr
+Analyzing string 10: ycppc((1.00/(00.0+2.)-.2))/((5.2/59.))ryyyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 1
+Transition to state q4 to state q5, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 0
+Transition to state q7 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 0
+Transition to state q7 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 0
+Transition to state q4 to state q5, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 0
+Transition to state q5 to state q5, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 0
+Transition to state q7 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 2
+Transition to state q4 to state q5, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: -
+Transition to state q8 to state q4, read-, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 2
+Transition to state q6 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: )
+Transition to state q8 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A']
+Read: /
+Transition to state q8 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 5
+Transition to state q4 to state q5, read5, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 2
+Transition to state q7 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 5
+Transition to state q4 to state q5, read5, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 9
+Transition to state q5 to state q5, read9, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: )
+Transition to state q8 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A']
+Read: r
+Transition to state q8 to state q9, readr, pop: A, push: A
+Current stack: ['$', 'A', 'A']
+Read: y
+Transition to state q9 to state q10, ready, pop: A, push: ε
+Current stack: ['$', 'A']
+Read: y
+Transition to state q10 to state q9, ready, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: y
+Transition to state q9 to state q10, ready, pop: A, push: ε
+Current stack: ['$']
+Read: r
+PDA crashed in state q10 at index 42 with input r. Current stack: ['$']
+Result: Rejected
+String 10 is rejected by the PDA.
+End of analysis for string 10.
+
+Enter string 11 of 15 to be analyzed: ycppc+8.2ryyyyr
+Analyzing string 11: ycppc+8.2ryyyyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: +
+PDA crashed in state q4 at index 5 with input +. Current stack: ['$', 'A', 'A']
+Result: Rejected
+String 11 is rejected by the PDA.
+End of analysis for string 11.
+
+Enter string 12 of 15 to be analyzed: ycc1./(.3/((54.-(.00))+(5.1)*41.4)/6.)*(((4.21-.3*0.*.01)+.2))/.42rr
+Analyzing string 12: ycc1./(.3/((54.-(.00))+(5.1)*41.4)/6.)*(((4.21-.3*0.*.01)+.2))/.42rr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: 1
+Transition to state q4 to state q5, read1, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', '(']
+Read: 3
+Transition to state q6 to state q7, read3, pop: ε, push: ε
+Current stack: ['$', '(']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(', '(', '(']
+Read: 5
+Transition to state q4 to state q5, read5, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 4
+Transition to state q5 to state q5, read4, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: -
+Transition to state q7 to state q4, read-, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(', '(', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(', '(']
+Read: 0
+Transition to state q6 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(', '(']
+Read: 0
+Transition to state q7 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: )
+Transition to state q8 to state q8, read), pop: (, push: ε
+Current stack: ['$', '(', '(']
+Read: +
+Transition to state q8 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(', '(', '(']
+Read: 5
+Transition to state q4 to state q5, read5, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 1
+Transition to state q7 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', '(', '(']
+Read: *
+Transition to state q8 to state q4, read*, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: 4
+Transition to state q4 to state q5, read4, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: 1
+Transition to state q5 to state q5, read1, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: 4
+Transition to state q7 to state q7, read4, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', '(']
+Read: /
+Transition to state q8 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', '(']
+Read: 6
+Transition to state q4 to state q5, read6, pop: ε, push: ε
+Current stack: ['$', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$']
+Read: *
+Transition to state q8 to state q4, read*, pop: ε, push: ε
+Current stack: ['$']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', '(', '(', '(']
+Read: 4
+Transition to state q4 to state q5, read4, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 2
+Transition to state q7 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 1
+Transition to state q7 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: -
+Transition to state q7 to state q4, read-, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 3
+Transition to state q6 to state q7, read3, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: *
+Transition to state q7 to state q4, read*, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 0
+Transition to state q4 to state q5, read0, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: *
+Transition to state q7 to state q4, read*, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 0
+Transition to state q6 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: 1
+Transition to state q7 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', '(', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', '(', '(']
+Read: +
+Transition to state q8 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: 2
+Transition to state q6 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', '(']
+Read: )
+Transition to state q8 to state q8, read), pop: (, push: ε
+Current stack: ['$']
+Read: /
+Transition to state q8 to state q4, read/, pop: ε, push: ε
+Current stack: ['$']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$']
+Read: 4
+Transition to state q6 to state q7, read4, pop: ε, push: ε
+Current stack: ['$']
+Read: 2
+Transition to state q7 to state q7, read2, pop: ε, push: ε
+Current stack: ['$']
+Read: r
+Transition to state q7 to state q9, readr, pop: $, push: $
+Current stack: ['$']
+Read: r
+Transition to state q9 to state q11, readr, pop: $, push: ε
+Current stack: []
+Result: Accepted
+String 12 is accepted by the PDA.
+End of analysis for string 12.
+
+Enter string 13 of 15 to be analyzed: ycppc.1/(4./.3+*4.))ryyyyr
+Analyzing string 13: ycppc.1/(4./.3+*4.))ryyyyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: 1
+Transition to state q6 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(']
+Read: 4
+Transition to state q4 to state q5, read4, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: 3
+Transition to state q6 to state q7, read3, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: *
+PDA crashed in state q4 at index 15 with input *. Current stack: ['$', 'A', 'A', '(']
+Result: Rejected
+String 13 is rejected by the PDA.
+End of analysis for string 13.
+
+Enter string 14 of 15 to be analyzed: ycpc(8./(.1+26.))*2.2)-.3*(52.1/5.ryyr
+Analyzing string 14: ycpc(8./(.1+26.))*2.2)-.3*(52.1/5.ryyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', '(']
+Read: 8
+Transition to state q4 to state q5, read8, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: /
+Transition to state q7 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: 1
+Transition to state q6 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: 2
+Transition to state q4 to state q5, read2, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: 6
+Transition to state q5 to state q5, read6, pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', '(']
+Read: )
+Transition to state q8 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A']
+Read: *
+Transition to state q8 to state q4, read*, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: 2
+Transition to state q4 to state q5, read2, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: 2
+Transition to state q7 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', 'A']
+Read: )
+PDA crashed in state q7 at index 21 with input ). Current stack: ['$', 'A']
+Result: Rejected
+String 14 is rejected by the PDA.
+End of analysis for string 14.
+
+Enter string 15 of 15 to be analyzed: ycppc(((.01)/(31.4+(.6+481.12))+8.8)ryyyyr
+Analyzing string 15: ycppc(((.01)/(31.4+(.6+481.12))+8.8)ryyyyr
+Start state: q1
+Read: y
+Transition to state q1 to state q2, ready, pop: ε, push: $
+Current stack: ['$']
+Read: c
+Transition to state q2 to state q3, readc, pop: ε, push: ε
+Current stack: ['$']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A']
+Read: p
+Transition to state q3 to state q3, readp, pop: ε, push: A
+Current stack: ['$', 'A', 'A']
+Read: c
+Transition to state q3 to state q4, readc, pop: ε, push: ε
+Current stack: ['$', 'A', 'A']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 0
+Transition to state q6 to state q7, read0, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 1
+Transition to state q7 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: /
+Transition to state q8 to state q4, read/, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 3
+Transition to state q4 to state q5, read3, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 1
+Transition to state q5 to state q5, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: 4
+Transition to state q7 to state q7, read4, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: (
+Transition to state q4 to state q4, read(, pop: ε, push: (
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: .
+Transition to state q4 to state q6, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: 6
+Transition to state q6 to state q7, read6, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: +
+Transition to state q7 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: 4
+Transition to state q4 to state q5, read4, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: 8
+Transition to state q5 to state q5, read8, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: 1
+Transition to state q5 to state q5, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: 1
+Transition to state q7 to state q7, read1, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: 2
+Transition to state q7 to state q7, read2, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(', '(', '(']
+Read: )
+Transition to state q8 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: +
+Transition to state q8 to state q4, read+, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 8
+Transition to state q4 to state q5, read8, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: .
+Transition to state q5 to state q7, read., pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: 8
+Transition to state q7 to state q7, read8, pop: ε, push: ε
+Current stack: ['$', 'A', 'A', '(', '(']
+Read: )
+Transition to state q7 to state q8, read), pop: (, push: ε
+Current stack: ['$', 'A', 'A', '(']
+Read: r
+PDA crashed in state q8 at index 36 with input r. Current stack: ['$', 'A', 'A', '(']
+Result: Rejected
+String 15 is rejected by the PDA.
+End of analysis for string 15.
 

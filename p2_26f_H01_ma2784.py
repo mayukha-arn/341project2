@@ -105,7 +105,7 @@ def transition(state,ch,stack):
 def process784(string):
     state=1
     stack=[]
-    output784(f"Start date: q{state}")
+    output784(f"Start state: q{state}")
     for idx,ch in enumerate(string):
         output784(f"Read: {ch}")
         result=transition(state,ch,stack)
